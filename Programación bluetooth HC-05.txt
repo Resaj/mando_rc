@@ -1,0 +1,30 @@
+Para programar el módulo, mantener el pulsador de KEY pulsado al encender el módulo.
+
+Los bluetooth HC-05 sólo pueden enlazarse por parejas, no formando redes.
+Para enlazar dos dispositivos, estos tienen que tener distinto rol (maestro/esclavo).
+Es indiferente poner el bluetooth maestro o el esclavo en el robot o el mando.
+Pero si se desea enlazar con el ordenador, el HC-05 tendrá que ser esclavo.
+
+-------------------------------------
+Programación por defecto:
+
+AT+ORGL
+
+-------------------------------------
+Programación del módulo MASTER HC-05:
+
+AT+NAME=mi_dispositivo_1
+AT+ROLE=1
+AT+PSWD=mi_password
+AT+UART=115200,0,0		// La misma que para el esclavo
+AT+CMODE=0
+AT+BIND=1234,56,abcdef		// Dirección del módulo esclavo (leerla con AT+ADDR?)
+
+-------------------------------------
+Programación del módulo SLAVE HC-05:
+
+AT+NAME=mi_dispositivo_2
+AT+ROLE=0
+AT+PSWD=mi_password
+AT+UART=115200,0,0		// La misma que para el maestro
+AT+CMODE=0
