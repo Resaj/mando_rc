@@ -1,4 +1,4 @@
-# Mando rc
+# Mando RC
 Mando radiocontrol con bluetooth.
 
 Este mando fue diseñado en un principio para el robot de sumo teledirigido, [Kassius](https://github.com/Resaj/rc-sumo-kassius), pero puede programarse para otro tipo de robots y aplicaciones.
